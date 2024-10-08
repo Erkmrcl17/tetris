@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>俄羅斯方塊遊戲</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="menu">
+            <h1>俄羅斯方塊</h1>
+            <button id="start-btn">開始遊戲</button>
+            <button id="register-btn">註冊</button>
+            <button id="login-btn">登入</button>
+            <button id="high-scores-btn">高分榜</button>
+        </div>
+        <div id="game-board" style="display: none;">
+            <canvas id="tetris" width="240" height="400"></canvas>
+            <div id="game-info">
+                <p>分數: <span id="score">0</span></p>
+                <p>等級: <span id="level">1</span></p>
+                <p>下一個方塊:</p>
+                <canvas id="next-piece" width="80" height="80"></canvas>
+            </div>
+        </div>
+        <div id="register-form" style="display: none;">
+            <h2>註冊</h2>
+            <input type="text" id="username" placeholder="用戶名">
+            <input type="password" id="password" placeholder="密碼">
+            <button id="submit-register">提交</button>
+        </div>
+        <div id="login-form" style="display: none;">
+            <h2>登入</h2>
+            <input type="text" id="login-username" placeholder="用戶名">
+            <input type="password" id="login-password" placeholder="密碼">
+            <button id="submit-login">提交</button>
+        </div>
+        <div id="high-scores" style="display: none;">
+            <h2>高分榜</h2>
+            <ul id="high-scores-list"></ul>
+            <button id="close-high-scores">關閉</button>
+        </div>
+    </div>
+    <script src="tetris.js"></script>
+</body>
+</html>
